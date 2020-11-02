@@ -1,0 +1,13 @@
+##Story List
+DWFM-1       As a user I want to able click Control Panel -> Batch Management so that i can access Control Panel -> Batch Management Pages
+DWFM-29      Button on Input Form Validation
+DWFM-30      Work Order Search- As an user I want work order search screen able to search by Appointment Id.
+DWFM-32      DWFM Menu
+DWFM-38      Truck Roll
+DWFM-39      Truck Roll
+DWFM-45      Work Order Management
+DWFM-47      Technician Roster Calendar
+DWFM-52      Manual Assignment
+DWFM-110     Control Panel - Resolution Code
+DWFM-9       DWFM Manual Assignment
+DWFM-112     Contractor Management/Multi Tenancy

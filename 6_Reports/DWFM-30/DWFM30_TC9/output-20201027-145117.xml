@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201027 14:51:17.538" rpa="false">
+<suite id="s1" name="Test Scenarios" source="C:\Users\buku3\PycharmProjects\DWFM_Project\1_Stories\DWFM-30\Test_Scenarios.robot">
+<test id="s1-t1" name="DWFM30_TC9">
+<kw name="Login to DWFM" library="dwfm_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201027 14:51:18.438" level="INFO">Opening browser 'chrome' to base url 'a1d5bf10b8eda423c8b1af8f61ed03f7-b34bb8413a847e3b.elb.ap-southeast-1.amazonaws.com:6070'.</msg>
+<status status="PASS" starttime="20201027 14:51:18.437" endtime="20201027 14:51:27.583"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201027 14:51:27.584" endtime="20201027 14:51:29.748"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_TEXTFIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201027 14:51:29.750" level="INFO">Typing text 'zhaoyi@pccw.com' into text field 'username'.</msg>
+<status status="PASS" starttime="20201027 14:51:29.749" endtime="20201027 14:51:29.958"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_TEXTFIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201027 14:51:29.961" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20201027 14:51:29.960" endtime="20201027 14:51:30.150"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BTN}</arg>
+</arguments>
+<msg timestamp="20201027 14:51:30.151" level="INFO">Clicking element '//*[@id="kc-login"]'.</msg>
+<status status="PASS" starttime="20201027 14:51:30.150" endtime="20201027 14:52:49.245"></status>
+</kw>
+<kw name="Reload If Page Failed To Load" library="Homepage">
+<kw name="${index} IN RANGE [ 1 | 1000 ]" type="for">
+<kw name="${index} = 1" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<assign>
+<var>${visibleMYEntt}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:53:09.666" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:53:09.274" endtime="20201027 14:53:09.666"></status>
+</kw>
+<msg timestamp="20201027 14:53:09.671" level="FAIL">Element '//*[contains(@class, 'pace-done') and contains(@class, 'theme-light')]//div[contains(@data-progress-text, '100%') and contains(@class, 'pace-progress')]/ancestor::body//a[@class='logo active']' did not appear in 20 seconds.</msg>
+<status status="FAIL" starttime="20201027 14:52:49.250" endtime="20201027 14:53:09.671"></status>
+</kw>
+<msg timestamp="20201027 14:53:09.672" level="INFO">${visibleMYEntt} = False</msg>
+<status status="PASS" starttime="20201027 14:52:49.249" endtime="20201027 14:53:09.672"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${visibleMYEntt} is ${True}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:53:09.672" endtime="20201027 14:53:09.673"></status>
+</kw>
+<kw name="Need to Reload Page" library="Homepage">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:53:10.051" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:53:09.674" endtime="20201027 14:53:10.051"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20201027 14:53:10.052" endtime="20201027 14:53:31.564"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:53:09.673" endtime="20201027 14:53:31.564"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:52:49.247" endtime="20201027 14:53:31.564"></status>
+</kw>
+<kw name="${index} = 2" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<assign>
+<var>${visibleMYEntt}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:53:52.140" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:53:51.744" endtime="20201027 14:53:52.140"></status>
+</kw>
+<msg timestamp="20201027 14:53:52.142" level="FAIL">Element '//*[contains(@class, 'pace-done') and contains(@class, 'theme-light')]//div[contains(@data-progress-text, '100%') and contains(@class, 'pace-progress')]/ancestor::body//a[@class='logo active']' did not appear in 20 seconds.</msg>
+<status status="FAIL" starttime="20201027 14:53:31.569" endtime="20201027 14:53:52.142"></status>
+</kw>
+<msg timestamp="20201027 14:53:52.142" level="INFO">${visibleMYEntt} = False</msg>
+<status status="PASS" starttime="20201027 14:53:31.567" endtime="20201027 14:53:52.142"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${visibleMYEntt} is ${True}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:53:52.143" endtime="20201027 14:53:52.144"></status>
+</kw>
+<kw name="Need to Reload Page" library="Homepage">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:53:52.524" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:53:52.146" endtime="20201027 14:53:52.524"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20201027 14:53:52.525" endtime="20201027 14:54:56.454"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:53:52.145" endtime="20201027 14:54:56.455"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:53:31.565" endtime="20201027 14:54:56.455"></status>
+</kw>
+<kw name="${index} = 3" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<assign>
+<var>${visibleMYEntt}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:55:17.165" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:55:16.605" endtime="20201027 14:55:17.166"></status>
+</kw>
+<msg timestamp="20201027 14:55:17.168" level="FAIL">Element '//*[contains(@class, 'pace-done') and contains(@class, 'theme-light')]//div[contains(@data-progress-text, '100%') and contains(@class, 'pace-progress')]/ancestor::body//a[@class='logo active']' did not appear in 20 seconds.</msg>
+<status status="FAIL" starttime="20201027 14:54:56.460" endtime="20201027 14:55:17.168"></status>
+</kw>
+<msg timestamp="20201027 14:55:17.168" level="INFO">${visibleMYEntt} = False</msg>
+<status status="PASS" starttime="20201027 14:54:56.458" endtime="20201027 14:55:17.168"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${visibleMYEntt} is ${True}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:55:17.169" endtime="20201027 14:55:17.171"></status>
+</kw>
+<kw name="Need to Reload Page" library="Homepage">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:55:17.598" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:55:17.173" endtime="20201027 14:55:17.599"></status>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20201027 14:55:17.600" endtime="20201027 14:55:54.224"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:55:17.172" endtime="20201027 14:55:54.225"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:54:56.457" endtime="20201027 14:55:54.225"></status>
+</kw>
+<kw name="${index} = 4" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<assign>
+<var>${visibleMYEntt}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:55:57.357" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201027 14:55:57.316" endtime="20201027 14:55:57.357"></status>
+</kw>
+<msg timestamp="20201027 14:55:57.358" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<msg timestamp="20201027 14:55:57.364" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201027 14:55:54.228" endtime="20201027 14:55:57.364"></status>
+</kw>
+<msg timestamp="20201027 14:55:57.365" level="INFO">${visibleMYEntt} = False</msg>
+<status status="PASS" starttime="20201027 14:55:54.226" endtime="20201027 14:55:57.365"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${visibleMYEntt} is ${True}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:55:57.365" endtime="20201027 14:55:57.367"></status>
+</kw>
+<kw name="Need to Reload Page" library="Homepage">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:55:57.387" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201027 14:55:57.377" endtime="20201027 14:55:57.387"></status>
+</kw>
+<msg timestamp="20201027 14:55:57.387" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<msg timestamp="20201027 14:55:57.391" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201027 14:55:57.369" endtime="20201027 14:55:57.392"></status>
+</kw>
+<status status="FAIL" starttime="20201027 14:55:57.368" endtime="20201027 14:55:57.393"></status>
+</kw>
+<status status="FAIL" starttime="20201027 14:55:54.225" endtime="20201027 14:55:57.394"></status>
+</kw>
+<status status="FAIL" starttime="20201027 14:52:49.247" endtime="20201027 14:55:57.394"></status>
+</kw>
+<status status="FAIL" starttime="20201027 14:52:49.246" endtime="20201027 14:55:57.395"></status>
+</kw>
+<status status="FAIL" starttime="20201027 14:51:18.437" endtime="20201027 14:55:57.395"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201027 14:55:57.397" endtime="20201027 14:55:59.848"></status>
+</kw>
+<doc>“Appointment ID” input type to allow is numeric at "Advance Search" tab is verified</doc>
+<status status="FAIL" starttime="20201027 14:51:18.435" endtime="20201027 14:55:59.848" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</status>
+</test>
+<doc>DWFM-30: Work Order Search- As an user I want work order search screen able to search by Appointment Id.
+01 October 2020
+Atikah Mohd Amin</doc>
+<status status="FAIL" starttime="20201027 14:51:17.544" endtime="20201027 14:55:59.850"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test Scenarios">Test Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20201027 14:55:57.358" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<msg timestamp="20201027 14:55:57.387" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=86.0.4240.75)
+</msg>
+</errors>
+</robot>

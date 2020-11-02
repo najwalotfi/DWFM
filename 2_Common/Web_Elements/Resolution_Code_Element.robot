@@ -1,0 +1,20 @@
+*** Variables ***
+${RESOLUTION_CODE_HEADER}       //h5[contains(., 'Resolution Code')]
+${CREATE_RC_POPUP_HEADER}       //div[contains(@class, 'modal-header')]//b[contains(., 'Create Resolution Code')]
+${CREATE_RC_POPUP_CREATE_BTN}   //button[contains(., 'Create')]
+${EDIT_RC_CODE_BTN}             //button[contains(@class, 'icon-link')]//span[contains(., 'Edit')]
+${EDIT_RC_POPUP_HEADER}         //div[contains(@class, 'modal-header')]//b[contains(., 'Edit Resolution Code')]
+${RC_NAME_TEXTFIELD}            //crmx-modal/div[contains(@class, 'show')]//crmx-form-input[@ng-reflect-label='Name']//input
+${RC_CODE_TEXTFIELD}            //crmx-modal/div[contains(@class, 'show')]//crmx-form-input[@ng-reflect-label='Code']//input
+${CREATE_RC_POPUP_UPDATE_BTN}   //button[contains(., 'Update')]
+${RC_DUPLICATE_NAME_ERROR_MSG}  //div[contains(@class, 'invalid-feedback')]
+${CREATE_RC_POPUP_CANCEL_BTN}   //div[contains(@class, 'md-show')]//button[contains(., 'Cancel')]
+${RC_DELETE_BTN}                //button[contains(@class, 'icon-link')]//span[contains(., 'Delete')]
+${RC_SUCCESSFULLY_DELETED_MSG}  //*[@id="toast-container"]//div[contains(., 'The data was successfully deleted')]
+${RC_SUCCESSFULLY_CREATED_MSG}  //*[@id="toast-container"]//div[contains(., 'The data was successfully created')]
+${RC_SUCCESSFULLY_UPDATED_MSG}  //*[@id="toast-container"]//div[contains(., 'The data was successfully updated')]
+${RC_CANNOT_DELETE_USE_BYOTHER_TABLE_MSG}       //div[contains(@class, 'modal-body-msg') and contains(., 'This record is being referenced')]
+${RC_OK_REFERRED_RECORD}        //button[contains(., 'Close')]
+${DELETE_RESOLUTION_CODE_POPUP_HEADER}    //div[contains(@class, 'modal-header')]//b[contains(., 'Delete Resolution Code')]
+${DELETE_RC_POPUP_MSG}          //div[contains(@class, 'md-show')]//div[contains(@class, 'modal-body') and contains(., 'Are you sure you want to delete Resolution Code: ')]
+${DELETE_BTN_POPUP}             //div[contains(@class, 'md-show')]//button[contains(., 'OK')]

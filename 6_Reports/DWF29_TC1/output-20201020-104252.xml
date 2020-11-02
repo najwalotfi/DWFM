@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201020 10:42:52.500" rpa="false">
+<suite id="s1" name="Test Scenarios" source="C:\Users\buku3\PycharmProjects\DWFM_Project\1_Stories\DWFM-29\Test_Scenarios.robot">
+<test id="s1-t1" name="DWF29_TC1">
+<kw name="Login to DWFM" library="dwfm_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201020 10:42:53.613" level="INFO">Opening browser 'chrome' to base url 'a1d5bf10b8eda423c8b1af8f61ed03f7-b34bb8413a847e3b.elb.ap-southeast-1.amazonaws.com:6070'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201020 10:48:00.793" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201020 10:47:59.060" endtime="20201020 10:48:00.794"></status>
+</kw>
+<msg timestamp="20201020 10:48:01.115" level="FAIL">TimeoutException: Message: timeout: Timed out receiving message from renderer: 299.796
+  (Session info: chrome=86.0.4240.75)
+</msg>
+<status status="FAIL" starttime="20201020 10:42:53.612" endtime="20201020 10:48:01.115"></status>
+</kw>
+<status status="FAIL" starttime="20201020 10:42:53.611" endtime="20201020 10:48:01.116"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201020 10:48:01.119" endtime="20201020 10:48:05.289"></status>
+</kw>
+<doc>To verify that when at least one form validation error is failed, the action button will be disabled.</doc>
+<status status="FAIL" starttime="20201020 10:42:53.609" endtime="20201020 10:48:05.289" critical="yes">TimeoutException: Message: timeout: Timed out receiving message from renderer: 299.796
+  (Session info: chrome=86.0.4240.75)
+</status>
+</test>
+<doc>DWFM-29: Button on Input Form Validation
+01 October 2020
+Atikah Mohd Amin</doc>
+<status status="FAIL" starttime="20201020 10:42:52.504" endtime="20201020 10:48:05.295"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test Scenarios">Test Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

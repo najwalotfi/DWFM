@@ -1,0 +1,15 @@
+*** Variables ***
+${USERNAME_TEXTFIELD}          username
+${PASSWORD_TEXTFIELD}           //*[@id="password"]
+${LOGIN_BTN}                    //*[@id="kc-login"]
+${NAVIGATED_TO_HOMEPAGE}         //*[contains(@class, 'pace-done') and contains(@class, 'theme-light')]//div[contains(@data-progress-text, '100%') and contains(@class, 'pace-progress')]/ancestor::body//a[@class='logo active']
+${PAGE_LODING_DONE}             //*[contains(@class, 'pace-done') and contains(@class, 'theme-light')]
+${PAGE_STILL_LOADING}            //*[@id="customer-loading"]
+${WORKFORCE_DDL}                //a//span[contains(., 'Workforce')]
+${WORK_MANAGEMENT_SUB_MENU_HEADER}      //div[contains(@class, 'sub-menu-header')]//a/span[contains(., 'Work Management')]
+${CONTROL_PANEL_SUB_LEVEL}          //nav[contains(@class, 'sub-level')]//a/span[contains(., 'Control Panel')]
+${INVALID_USERNAME_PASSWORD_ALERT}      //div[contains(@class, 'alert-error')]/span[contains(., 'Invalid username or password.')]
+${APPOINTMENT_HEADER}        //h5[contains(., 'Appointment Search')]
+${SERVICE_WORK_HEADER}        //h5[contains(., 'Service Work Search')]
+${SHOW_SUBSTATION_LABEL}        //label[contains(., 'Show Substations')]
+${LOADING_SPINNER}              //div[contains(@class, 'loading-spinner')]

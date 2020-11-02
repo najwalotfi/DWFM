@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201027 14:10:21.741" rpa="false">
+<suite id="s1" name="Test Scenarios" source="C:\Users\buku3\PycharmProjects\DWFM_Project\1_Stories\DWFM-9\Test_Scenarios.robot">
+<test id="s1-t1" name="DWFM9_TC1">
+<kw name="Login to DWFM" library="dwfm_resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201027 14:10:24.371" level="INFO">Opening browser 'chrome' to base url 'a1d5bf10b8eda423c8b1af8f61ed03f7-b34bb8413a847e3b.elb.ap-southeast-1.amazonaws.com:6070'.</msg>
+<status status="PASS" starttime="20201027 14:10:24.370" endtime="20201027 14:10:42.788"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201027 14:10:42.789" endtime="20201027 14:10:45.574"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_TEXTFIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201027 14:10:45.577" level="INFO">Typing text 'zhaoyi@pccw.com' into text field 'username'.</msg>
+<status status="PASS" starttime="20201027 14:10:45.576" endtime="20201027 14:10:45.957"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_TEXTFIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201027 14:10:45.960" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20201027 14:10:45.958" endtime="20201027 14:10:46.424"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BTN}</arg>
+</arguments>
+<msg timestamp="20201027 14:10:46.426" level="INFO">Clicking element '//*[@id="kc-login"]'.</msg>
+<status status="PASS" starttime="20201027 14:10:46.425" endtime="20201027 14:10:55.551"></status>
+</kw>
+<kw name="Reload If Page Failed To Load" library="Homepage">
+<kw name="${index} IN RANGE [ 1 | 1000 ]" type="for">
+<kw name="${index} = 1" type="foritem">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<assign>
+<var>${visibleMYEntt}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+<arg>20s</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:10:55.557" endtime="20201027 14:11:07.151"></status>
+</kw>
+<msg timestamp="20201027 14:11:07.152" level="INFO">${visibleMYEntt} = True</msg>
+<status status="PASS" starttime="20201027 14:10:55.556" endtime="20201027 14:11:07.152"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${visibleMYEntt} is ${True}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:07.156" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20201027 14:11:07.154" endtime="20201027 14:11:07.157"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:10:55.555" endtime="20201027 14:11:07.157"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:10:55.554" endtime="20201027 14:11:07.157"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:10:55.552" endtime="20201027 14:11:07.159"></status>
+</kw>
+<kw name="Page Loaded Successfully" library="Homepage">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${NAVIGATED_TO_HOMEPAGE}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:07.256" level="INFO">Current page contains element '//*[contains(@class, 'pace-done') and contains(@class, 'theme-light')]//div[contains(@data-progress-text, '100%') and contains(@class, 'pace-progress')]/ancestor::body//a[@class='logo active']'.</msg>
+<status status="PASS" starttime="20201027 14:11:07.163" endtime="20201027 14:11:07.257"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:07.160" endtime="20201027 14:11:07.258"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:08.061" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:07.259" endtime="20201027 14:11:08.062"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:10:24.367" endtime="20201027 14:11:08.062"></status>
+</kw>
+<kw name="Click at Manual Assignment under Work Force" library="Keywords">
+<kw name="Access Sub Menu From Workforce" library="Generic_Keyword_Library">
+<doc>Access Sub Menu From Workforce Main Menu
+Atikah Mohd Amin
+01 October 2020</doc>
+<arguments>
+<arg>Work Management</arg>
+<arg>Manual Assignment</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${WORKFORCE_DDL}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:08.068" level="INFO">Clicking element '//a//span[contains(., 'Workforce')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:08.067" endtime="20201027 14:11:08.609"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[contains(@class, 'sub-menu-header')]//a/span[contains(., "${subMenu}")]</arg>
+<arg>30s</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:08.610" endtime="20201027 14:11:08.998"></status>
+</kw>
+<kw name="Scroll to Element" library="Generic_Keyword_Library">
+<doc>To input value to specific element in the page using xpath
+Atikah Mohd Amin
+28 Sept 2020</doc>
+<arguments>
+<arg>//nav[contains(@class, 'sub-level')]//a/span[contains(., '${subSubLevel}')]</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${elementXpath3}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(); window.scrollBy(0, 600);</arg>
+</arguments>
+<msg timestamp="20201027 14:11:09.003" level="INFO">Executing JavaScript:
+document.evaluate("//nav[contains(@class, 'sub-level')]//a/span[contains(., 'Manual Assignment')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.scrollIntoView(); window.scrollBy(0, 600);
+Without any arguments.</msg>
+<status status="PASS" starttime="20201027 14:11:09.002" endtime="20201027 14:11:09.034"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:08.999" endtime="20201027 14:11:09.035"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:10.133" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:09.036" endtime="20201027 14:11:10.133"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//nav[contains(@class, 'sub-level')]//a/span[contains(., "${subSubLevel}")]</arg>
+</arguments>
+<msg timestamp="20201027 14:11:10.136" level="INFO">Clicking element '//nav[contains(@class, 'sub-level')]//a/span[contains(., "Manual Assignment")]'.</msg>
+<status status="PASS" starttime="20201027 14:11:10.135" endtime="20201027 14:11:10.773"></status>
+</kw>
+<kw name="Page Finished Loading" library="Homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${LOADING_SPINNER}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:10.778" endtime="20201027 14:11:11.667"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PAGE_LODING_DONE}</arg>
+<arg>130s</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:11.668" endtime="20201027 14:11:11.799"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${PAGE_STILL_LOADING}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:19.140" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20201027 14:11:11.800" endtime="20201027 14:11:19.489"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${LOADING_SPINNER}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:19.491" endtime="20201027 14:11:19.583"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:10.774" endtime="20201027 14:11:19.584"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:08.065" endtime="20201027 14:11:19.585"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${MANUAL_ASSIGNMENT_HEADER}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:19.638" level="INFO">Current page contains element '//h5[contains(., 'Manual Assignment')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:19.586" endtime="20201027 14:11:19.638"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:08.063" endtime="20201027 14:11:19.639"></status>
+</kw>
+<kw name="Click All button to view all available rosters" library="Keywords">
+<kw name="Choose Assignment Group" library="Keywords">
+<kw name="Choose Value from Drop Down List" library="Generic_Keyword_Library">
+<doc>To select value in Dropdown List Based on DropDown List Label Name
+Atikah Mohd Amin
+30 Sept 2020</doc>
+<arguments>
+<arg>Assignment</arg>
+<arg>${ASSMNT_GROUP_DATA}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//label//span[contains(., "${dropDownListLabel}")]/ancestor::div[contains(@class, 'default-label')]/following-sibling::div[@class='input-group']//a[@role='button']</arg>
+</arguments>
+<msg timestamp="20201027 14:11:19.650" level="INFO">Clicking element '//label//span[contains(., "Assignment")]/ancestor::div[contains(@class, 'default-label')]/following-sibling::div[@class='input-group']//a[@role='button']'.</msg>
+<status status="PASS" starttime="20201027 14:11:19.648" endtime="20201027 14:11:20.226"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//div[contains(@class, 'select-dropdown-list show')]</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:20.227" endtime="20201027 14:11:20.349"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:21.147" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:20.350" endtime="20201027 14:11:21.147"></status>
+</kw>
+<kw name="Click Element By Xpath" library="Generic_Keyword_Library">
+<doc>To click specific element in the page using xpath
+Atikah Mohd Amin
+23 Oct 2020</doc>
+<arguments>
+<arg>(//a[contains(@class, 'select-dropdown-item') and contains(., '${listData}')])[1]</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.evaluate("${elementXpath2}", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();</arg>
+</arguments>
+<msg timestamp="20201027 14:11:21.153" level="INFO">Executing JavaScript:
+document.evaluate("(//a[contains(@class, 'select-dropdown-item') and contains(., 'AG001')])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20201027 14:11:21.151" endtime="20201027 14:11:21.272"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:21.148" endtime="20201027 14:11:21.273"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//label//span[text()="${dropDownListLabel}"]/ancestor::div[contains(@class, 'default-label')]/following-sibling::div[@class='input-group']//a[@role='button']//div[contains(., "${listData}")]</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:21.274" endtime="20201027 14:11:22.739"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:19.644" endtime="20201027 14:11:22.740"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:19.641" endtime="20201027 14:11:22.741"></status>
+</kw>
+<kw name="Choose Date" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MA_CALENDAR_BTN}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:22.746" level="INFO">Clicking element '//crmx-datepicker//button/i[contains(@class, 'icon-calendar2')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:22.744" endtime="20201027 14:11:24.498"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MA_CALENDAR_BTN}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:24.499" endtime="20201027 14:11:24.598"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${CALENDAR_MONTH_DLL}</arg>
+<arg>${MA_MONTH_DATA}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:24.600" level="INFO">Selecting options from selection list '//select[contains(@title, 'Select month')]' by value 10.</msg>
+<status status="PASS" starttime="20201027 14:11:24.599" endtime="20201027 14:11:24.771"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MA_DAY_DATA}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:24.773" level="INFO">Clicking element '//div[contains(@class, 'custom-day') and contains(., '28')][not(contains(@class, 'text-muted'))]'.</msg>
+<status status="PASS" starttime="20201027 14:11:24.772" endtime="20201027 14:11:25.291"></status>
+</kw>
+<kw name="Page Finished Loading" library="Homepage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${LOADING_SPINNER}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:25.294" endtime="20201027 14:11:26.588"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${PAGE_LODING_DONE}</arg>
+<arg>130s</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:26.589" endtime="20201027 14:11:26.622"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${PAGE_STILL_LOADING}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:27.825" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<status status="PASS" starttime="20201027 14:11:26.623" endtime="20201027 14:11:28.051"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${LOADING_SPINNER}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:28.052" endtime="20201027 14:11:28.076"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:25.291" endtime="20201027 14:11:28.077"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:22.742" endtime="20201027 14:11:28.077"></status>
+</kw>
+<kw name="Click All in Manual Assignment" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MA_ALL_TASK}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:28.081" level="INFO">Clicking element '//button[contains(@class, 'filter-button') and contains(., 'All')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:28.081" endtime="20201027 14:11:28.362"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${MA_TASK1}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:28.364" endtime="20201027 14:11:28.433"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:29.201" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:28.434" endtime="20201027 14:11:29.201"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:28.078" endtime="20201027 14:11:29.202"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:19.640" endtime="20201027 14:11:29.203"></status>
+</kw>
+<kw name="Verify Manual Assignment calendar displayed" library="Keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${MA_ROSTER}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:29.275" level="INFO">Current page contains element '//*[@id="timelineContainer"]'.</msg>
+<status status="PASS" starttime="20201027 14:11:29.206" endtime="20201027 14:11:29.275"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${MA_TASK1}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:29.307" level="INFO">Current page contains element '//div[contains(@class, 'work-item-bar')][1]'.</msg>
+<status status="PASS" starttime="20201027 14:11:29.276" endtime="20201027 14:11:29.308"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:30.051" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:29.309" endtime="20201027 14:11:30.051"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:29.204" endtime="20201027 14:11:30.052"></status>
+</kw>
+<kw name="Mouse over the technician name" library="Keywords">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>//div[@class='vis-label']//span[contains(., '${TECHNICIAN_NAME_DATA}')]</arg>
+</arguments>
+<msg timestamp="20201027 14:11:30.056" level="INFO">Simulating Mouse Over on element '//div[@class='vis-label']//span[contains(., 'Mariah Carey')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:30.055" endtime="20201027 14:11:30.613"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201027 14:11:31.617" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201027 14:11:30.614" endtime="20201027 14:11:31.617"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:30.053" endtime="20201027 14:11:31.618"></status>
+</kw>
+<kw name="Verify A tooltip should be displayed on the technician name" library="Keywords">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:32.348" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:31.621" endtime="20201027 14:11:32.348"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:31.619" endtime="20201027 14:11:32.349"></status>
+</kw>
+<kw name="Mouse over the task on left side" library="Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${TASK_MANUAL_ASSIGNMENT}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:32.353" level="INFO">Clicking element '//div[contains(@class, 'work-item-bar')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:32.352" endtime="20201027 14:11:32.837"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:32.350" endtime="20201027 14:11:32.838"></status>
+</kw>
+<kw name="Verify popup should be displayed showing details of the task" library="Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${WORK_DETAILS_POPUP}</arg>
+<arg>${visibilityTimeOut}</arg>
+</arguments>
+<status status="PASS" starttime="20201027 14:11:32.841" endtime="20201027 14:11:33.352"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${MORE_DETAILS_BTN}</arg>
+</arguments>
+<msg timestamp="20201027 14:11:33.464" level="INFO">Current page contains element '//button[contains(., 'More Detail')]'.</msg>
+<status status="PASS" starttime="20201027 14:11:33.354" endtime="20201027 14:11:33.464"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201027 14:11:34.218" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201027 14:11:33.465" endtime="20201027 14:11:34.218"></status>
+</kw>
+<status status="PASS" starttime="20201027 14:11:32.839" endtime="20201027 14:11:34.219"></status>
+</kw>
+<doc>To verify that the Calendar displayed is following the style guide</doc>
+<status status="PASS" starttime="20201027 14:10:24.363" endtime="20201027 14:11:34.220" critical="yes"></status>
+</test>
+<doc>DWFM-9:To verify that the Calendar displayed is following the style guide
+19 October 2020
+Atikah Mohd Amin</doc>
+<status status="PASS" starttime="20201027 14:10:21.751" endtime="20201027 14:11:34.227"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test Scenarios">Test Scenarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
